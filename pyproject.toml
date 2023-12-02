@@ -1,0 +1,35 @@
+[project]
+name = "expense_manager"
+version = "0.0.1"
+authors = [
+  { name="John Spence", email="johnspencevii@gmail.com" },
+]
+description = "For tracking income, monthly expenses, and estimating future account balances."
+readme = "README.md"
+requires-python = ">=3.7"
+
+[project.scripts]
+ts_expman = "ts.expense_manager.main:main"
+
+[project.optional-dependencies]
+dev = [
+  "pylint",
+  "black"
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.pylint.MASTER]
+ignore-paths = '^src/ts/*/ui/.*$'
+extension-pkg-allow-list = [
+  "PySide2.QtCore",
+  "PySide2.QtGui",
+  "PySide2.QtWidgets"
+]
+
+[build-system]
+requires = ["setuptools>=47.1.0"]
+build-backend = "setuptools.build_meta"
