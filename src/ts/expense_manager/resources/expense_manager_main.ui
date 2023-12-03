@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExpenseManagerMain</class>
+ <widget class="QMainWindow" name="ExpenseManagerMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ExpenseManager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="eoSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="expensesLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QTreeView" name="expensesTreeView"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="addOrRemoveLayout">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="addExpenseButton">
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeExpenseButton">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="addOrRemoveSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>248</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="overviewFrame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QSplitter" name="overviewSplitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QTableView" name="expenseSummaryTableView"/>
+          <widget class="QTableView" name="transactionSummaryTableView"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain">
+    <property name="title">
+     <string>Main</string>
+    </property>
+    <addaction name="actionNew_profile"/>
+    <addaction name="actionOpen_profile"/>
+    <addaction name="actionDelete_profile_2"/>
+    <addaction name="actionClose_profile"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_income_source"/>
+    <addaction name="actionAdd_payment_method"/>
+    <addaction name="separator"/>
+    <addaction name="actionImport_transactions"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionIncome_sources"/>
+    <addaction name="actionPayment_methods"/>
+    <addaction name="actionTransactions"/>
+    <addaction name="actionDebts"/>
+   </widget>
+   <addaction name="menuMain"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_profile">
+   <property name="text">
+    <string>New profile...</string>
+   </property>
+  </action>
+  <action name="actionOpen_profile">
+   <property name="text">
+    <string>Open profile...</string>
+   </property>
+  </action>
+  <action name="actionDelete_profile">
+   <property name="text">
+    <string>Delete profile...</string>
+   </property>
+  </action>
+  <action name="actionDelete_profile_2">
+   <property name="text">
+    <string>Delete profile...</string>
+   </property>
+  </action>
+  <action name="actionClose_profile">
+   <property name="text">
+    <string>Close profile...</string>
+   </property>
+  </action>
+  <action name="actionAdd_income_source">
+   <property name="text">
+    <string>Add income source...</string>
+   </property>
+  </action>
+  <action name="actionAdd_payment_type">
+   <property name="text">
+    <string>Add payment type...</string>
+   </property>
+  </action>
+  <action name="actionAdd_payment_method">
+   <property name="text">
+    <string>Add payment method...</string>
+   </property>
+  </action>
+  <action name="actionImport_transactions">
+   <property name="text">
+    <string>Import transactions...</string>
+   </property>
+  </action>
+  <action name="actionIncome_sources">
+   <property name="text">
+    <string>Income sources</string>
+   </property>
+  </action>
+  <action name="actionPayment_methods">
+   <property name="text">
+    <string>Payment methods</string>
+   </property>
+  </action>
+  <action name="actionTransactions">
+   <property name="text">
+    <string>Transactions</string>
+   </property>
+  </action>
+  <action name="actionDebts">
+   <property name="text">
+    <string>Debts</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

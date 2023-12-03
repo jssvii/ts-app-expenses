@@ -7,6 +7,9 @@ authors = [
 description = "For tracking income, monthly expenses, and estimating future account balances."
 readme = "README.md"
 requires-python = ">=3.7"
+dependencies = [
+  "PySide2"
+]
 
 [project.scripts]
 ts_expman = "ts.expense_manager.main:main"

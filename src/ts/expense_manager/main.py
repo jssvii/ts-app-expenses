@@ -6,6 +6,10 @@ import argparse
 import os
 import sys
 
+from PySide2 import QtWidgets
+
+from ts.expense_manager.expense_manager import ExpenseManager
+
 
 def main():
     """Entry point to the Expense Manager app"""
@@ -17,8 +21,11 @@ def main():
     args = parser.parse_args()
 
     try:
-        print(f"Running with args: {args}")
-        return 1
+        app = QtWidgets.QApplication()
+        expense_manager = ExpenseManager()
+        expense_manager.show()
+
+        return app.exec_()
     except KeyboardInterrupt:
         print("The application was terminated...")
         sys.exit(1)
